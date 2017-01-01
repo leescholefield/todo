@@ -10,8 +10,6 @@ Each todo comment will have it's own entry in the todo file. An entry will follo
 
 """
 
-test_path = '/home/lee/projects/macds/googlecalendar.py'
-
 
 def read_file(path):
     """
