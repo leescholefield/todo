@@ -9,6 +9,7 @@ Each todo comment will have it's own entry in the todo file. An entry will follo
     [line number] text
 
 """
+# for testing. Should be imported from rules.yml
 get_def = True
 
 def read_file(path):
