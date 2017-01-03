@@ -1,0 +1,4 @@
+# Gets the function definition following the todo comment
+get-def: true
+# Includes the line number of the todo comment
+get-ln: true

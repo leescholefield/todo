@@ -9,6 +9,7 @@ Each todo comment will have it's own entry in the todo file. An entry will follo
     [line number] text
 
 """
+get_def = True
 
 def read_file(path):
     """
@@ -54,8 +55,20 @@ def read_file_looper(search, lst, source):
     for num, line in enumerate(source, 1):
         if search in line:
             lst.append(str(num) + " " +  _remove_whitespace(line))
+            if get_def:
+                # get the function definition
+                d = find_def(enumerate(source,num))
+                lst.append(_remove_whitespace(d))
 
     return lst
+
+def find_def(source):
+    """
+    find the function definition following the todo statement.
+    """
+    for num, line in source:
+        if "def " in line:
+            return line
 
 def write_file(path, ls):
     """
